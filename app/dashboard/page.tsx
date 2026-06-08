@@ -200,7 +200,7 @@ export default function DashboardPage() {
       {/* 1. Header Banner & Quick Action Buttons */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-foreground">Welcome to CRM Core</h2>
+          <h2 className="text-xl font-bold text-foreground">Welcome to Elara</h2>
           <p className="text-sm text-muted-foreground mt-0.5">
             Here is your sales performance overview and action center.
           </p>

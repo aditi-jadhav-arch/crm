@@ -137,7 +137,7 @@ export default function SettingsPage() {
       {/* Settings Navigation Column */}
       <aside className="w-full md:w-56 bg-sidebar border-b md:border-b-0 md:border-r border-border shrink-0 p-4 space-y-1 select-none">
         <div className="px-3 py-2 text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2">
-          CRM Settings
+          Elara Settings
         </div>
         {tabs.map((tab) => {
           const Icon = tab.icon;
@@ -256,7 +256,7 @@ export default function SettingsPage() {
                       toast.error("User session not found.");
                       return;
                     }
-                    const toastId = toast.loading("Seeding mock CRM data...");
+                    const toastId = toast.loading("Seeding mock Elara data...");
                     try {
                       const res = await fetch(`/api/seed?uid=${user.uid}`);
                       const data = await res.json();
@@ -271,7 +271,7 @@ export default function SettingsPage() {
                   }}
                   className="px-4 py-2 bg-secondary text-foreground hover:bg-accent border border-border font-semibold rounded-md text-sm cursor-pointer shadow-sm"
                 >
-                  Seed Mock CRM Data
+                  Seed Mock Data
                 </button>
               </div>
             )}
@@ -330,7 +330,7 @@ export default function SettingsPage() {
             <div>
               <h3 className="text-md font-bold text-foreground">Team &amp; Invitations</h3>
               <p className="text-xs text-muted-foreground mt-0.5">
-                Invite team members and view CRM users in your workspace.
+                Invite team members and view Elara users in your workspace.
               </p>
             </div>
 
@@ -359,7 +359,7 @@ export default function SettingsPage() {
             {/* Registered Users List */}
             <div className="space-y-3">
               <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
-                Active CRM Users ({teamUsers.length})
+                Active Elara Users ({teamUsers.length})
               </h4>
               
               <div className="divide-y divide-border border border-border rounded-lg max-w-lg">
@@ -465,7 +465,7 @@ export default function SettingsPage() {
 
             <div className="border border-red-200 dark:border-red-900/50 rounded-lg p-5 bg-red-50/10 max-w-md space-y-4">
               <div>
-                <span className="text-sm font-bold text-foreground block">Delete CRM Workspace Account</span>
+                <span className="text-sm font-bold text-foreground block">Delete Elara Workspace</span>
                 <span className="text-xs text-muted-foreground block mt-1">
                   Permanently delete all workspace data (contacts, deals, activities, and corporate configurations).
                 </span>
@@ -487,8 +487,8 @@ export default function SettingsPage() {
         isOpen={isDeleteOpen}
         onClose={() => setIsDeleteOpen(false)}
         onConfirm={handleDeleteAccount}
-        title="Delete CRM Workspace Account"
-        description="Are you absolutely sure you want to delete your CRM Account? This will destroy all pipeline opportunities, log records, and profiles, and CANNOT be restored."
+        title="Delete Elara Workspace"
+        description="Are you absolutely sure you want to delete your Elara workspace? This will destroy all pipeline opportunities, log records, and profiles, and CANNOT be restored."
         confirmText="Permanently Delete Workspace"
         cancelText="Cancel"
       />

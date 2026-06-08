@@ -617,7 +617,7 @@ export default function DealsPage() {
         onClose={() => setDeleteDeal(null)}
         onConfirm={handleSingleDelete}
         title="Delete Deal Opportunity"
-        description={`Are you sure you want to delete "${deleteDeal?.title}"? This sales opportunity will be permanently deleted from the CRM.`}
+        description={`Are you sure you want to delete "${deleteDeal?.title}"? This sales opportunity will be permanently removed from Elara.`}
         confirmText="Delete"
         cancelText="Cancel"
       />

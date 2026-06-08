@@ -69,7 +69,7 @@ export function Header({ onMenuClick }: HeaderProps) {
     if (pathname === "/activities") return "Activities & Tasks";
     if (pathname === "/reports") return "Reports & Analytics";
     if (pathname === "/settings") return "Settings";
-    return "CRM Core";
+    return "Elara";
   };
 
   return (

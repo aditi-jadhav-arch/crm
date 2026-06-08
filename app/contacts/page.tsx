@@ -335,7 +335,7 @@ export default function ContactsPage() {
         <EmptyState
           icon={UserPlus}
           title="No Contacts Yet"
-          description="Create your first contact manually or go to CRM settings to seed realistic mock data."
+          description="Create your first contact manually or go to Elara Settings to seed realistic mock data."
           action={{
             label: "Add Contact",
             onClick: () => {

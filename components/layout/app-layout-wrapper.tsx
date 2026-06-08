@@ -25,16 +25,17 @@ export function AppLayoutWrapper({ children }: AppLayoutWrapperProps) {
   const [activitySheetOpen, setActivitySheetOpen] = useState(false);
 
   const isAuthPage = pathname === "/login" || pathname === "/register";
+  const isPublicPage = pathname === "/";
 
   useEffect(() => {
     if (!loading) {
-      if (!user && !isAuthPage) {
+      if (!user && !isAuthPage && !isPublicPage) {
         router.replace("/login");
       } else if (user && isAuthPage) {
         router.replace("/dashboard");
       }
     }
-  }, [user, loading, isAuthPage, router]);
+  }, [user, loading, isAuthPage, isPublicPage, router]);
 
   // Listen for global quick action triggers
   useEffect(() => {
@@ -53,30 +54,35 @@ export function AppLayoutWrapper({ children }: AppLayoutWrapperProps) {
     };
   }, []);
 
-  // Loading state visual wrapper (Sleek minimalist loader)
+  // Public landing page - render immediately, never block on auth loading
+  if (isPublicPage) {
+    return <>{children}</>;
+  }
+
+  // Auth pages (login/register) - render immediately too
+  if (isAuthPage) {
+    return <>{children}</>;
+  }
+
+  // Loading state visual wrapper (only for protected dashboard routes)
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex flex-col items-center justify-center select-none">
         <div className="h-10 w-10 border-3 border-t-primary border-r-border border-b-border border-l-border rounded-full animate-spin mb-4" />
         <span className="text-sm font-semibold text-muted-foreground tracking-wide animate-pulse">
-          Loading CRM core...
+          Loading Elara...
         </span>
       </div>
     );
   }
 
   // Redirecting state blank screen
-  if (!user && !isAuthPage) {
+  if (!user) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         {/* Empty placeholder while redirecting */}
       </div>
     );
-  }
-
-  // Auth screen layout
-  if (isAuthPage) {
-    return <>{children}</>;
   }
 
   // Dashboard layout

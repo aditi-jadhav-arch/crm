@@ -324,7 +324,7 @@ export default function CompaniesPage() {
         <EmptyState
           icon={Building2}
           title="No Companies Yet"
-          description="Create your first client company manually or go to CRM settings to seed realistic mock data."
+          description="Create your first client company manually or go to Elara Settings to seed realistic mock data."
           action={{
             label: "Add Company",
             onClick: () => {

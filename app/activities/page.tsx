@@ -453,7 +453,7 @@ export default function ActivitiesPage() {
         onClose={() => setDeleteActivity(null)}
         onConfirm={handleDelete}
         title="Delete Activity / Task Record"
-        description="Are you sure you want to remove this logged activity? It will be permanently deleted from the CRM records."
+        description="Are you sure you want to remove this logged activity? It will be permanently deleted from Elara."
         confirmText="Delete Record"
         cancelText="Cancel"
       />

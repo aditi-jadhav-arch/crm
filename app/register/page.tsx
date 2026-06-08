@@ -63,12 +63,13 @@ export default function RegisterPage() {
         
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="h-12 w-12 rounded-lg bg-primary text-white flex items-center justify-center font-bold text-xl mx-auto mb-3 shadow-md">
-            C
-          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="48" height="48" aria-hidden="true" className="mx-auto mb-3 shadow-md rounded-xl">
+            <rect width="32" height="32" rx="7" ry="7" fill="#c96442"/>
+            <text x="16" y="23" fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fontSize="20" fontWeight="800" fill="#ffffff" textAnchor="middle" letterSpacing="-0.5">E</text>
+          </svg>
           <h2 className="text-2xl font-bold text-foreground">Create account</h2>
           <p className="text-sm text-muted-foreground mt-1.5">
-            Get started by creating your CRM profile
+            Get started with your Elara workspace
           </p>
         </div>
 

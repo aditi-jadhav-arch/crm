@@ -108,7 +108,7 @@ export function AddContactSheet({ isOpen, onClose, contactToEdit }: AddContactSh
           <SheetDescription>
             {isEdit
               ? "Update the contact profile information."
-              : "Enter the details below to create a new CRM contact profile."}
+              : "Enter the details below to add a new contact to Elara."}
           </SheetDescription>
         </SheetHeader>
 

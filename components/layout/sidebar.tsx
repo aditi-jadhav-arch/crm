@@ -60,11 +60,12 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
       >
         {/* App Logo */}
         <div className="h-16 flex items-center gap-2.5 px-6 border-b border-sidebar-border select-none bg-sidebar shrink-0">
-          <div className="h-8 w-8 rounded-md bg-sidebar-primary flex items-center justify-center text-sidebar-primary-foreground font-bold shadow-sm">
-            C
-          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+            <rect width="32" height="32" rx="7" ry="7" fill="#c96442"/>
+            <text x="16" y="23" fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fontSize="20" fontWeight="800" fill="#ffffff" textAnchor="middle" letterSpacing="-0.5">E</text>
+          </svg>
           <span className="font-extrabold text-lg tracking-tight text-sidebar-foreground">
-            CRM Core
+            Elara
           </span>
         </div>
 

@@ -10,8 +10,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CRM Core - Customer Relationship Management",
-  description: "A secure, production-ready Customer Relationship Management application built with Next.js, Tailwind CSS v4, and Firebase.",
+  title: {
+    default: "Elara | Modern CRM for Teams",
+    template: "%s | Elara",
+  },
+  description: "Elara is a modern, production-ready Customer Relationship Management application. Manage contacts, deals, and pipelines in one beautiful workspace.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {

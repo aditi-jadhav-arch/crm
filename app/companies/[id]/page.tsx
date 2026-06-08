@@ -470,7 +470,7 @@ export default function CompanyDetailPage() {
         onClose={() => setIsDeleteOpen(false)}
         onConfirm={handleDelete}
         title="Delete Corporate Account"
-        description={`Are you sure you want to delete ${company.name}? This will permanently delete their company profile in the CRM.`}
+        description={`Are you sure you want to delete ${company.name}? This will permanently delete their company profile from Elara.`}
         confirmText="Delete Account"
         cancelText="Cancel"
       />
