@@ -23,11 +23,11 @@ export function ActivityTimeline({ activities }: ActivityTimelineProps) {
       {activities.map((act) => {
         // Different icon colors based on activity type
         const typeColors = {
-          call: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 border-blue-200 dark:border-blue-800/50",
-          email: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400 border-amber-200 dark:border-amber-800/50",
-          meeting: "bg-purple-50 text-purple-600 dark:bg-purple-900/20 dark:text-purple-400 border-purple-200 dark:border-purple-800/50",
-          note: "bg-sky-50 text-sky-600 dark:bg-sky-950/20 dark:text-sky-400 border-sky-200 dark:border-sky-900/50",
-          task: "bg-rose-50 text-rose-600 dark:bg-rose-900/20 dark:text-rose-400 border-rose-200 dark:border-rose-800/50",
+          call: "bg-blue-50 text-blue-600 border-blue-200",
+          email: "bg-amber-50 text-amber-600 border-amber-200",
+          meeting: "bg-purple-50 text-purple-600 border-purple-200",
+          note: "bg-sky-50 text-sky-600 border-sky-200",
+          task: "bg-rose-50 text-rose-600 border-rose-200",
         };
 
         const iconBg = typeColors[act.type] || typeColors.note;
@@ -66,10 +66,10 @@ export function ActivityTimeline({ activities }: ActivityTimelineProps) {
                     <span className={cn(
                       "inline-flex items-center gap-1 px-2 py-0.5 rounded border",
                       act.isCompleted 
-                        ? "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/20 dark:text-emerald-400 dark:border-emerald-900/50"
+                        ? "bg-emerald-50 text-emerald-700 border-emerald-200"
                         : new Date(act.dueDate.seconds * 1000).getTime() < Date.now()
-                          ? "bg-red-50 text-red-600 border-red-200 dark:bg-red-950/20 dark:text-red-400 dark:border-red-900/50"
-                          : "bg-amber-50 text-amber-600 border-amber-200 dark:bg-amber-950/20 dark:text-amber-400 dark:border-amber-900/50"
+                          ? "bg-red-50 text-red-600 border-red-200"
+                          : "bg-amber-50 text-amber-600 border-amber-200"
                     )}>
                       <Calendar className="h-3 w-3" />
                       Due: {formatDate(act.dueDate)}
@@ -78,8 +78,8 @@ export function ActivityTimeline({ activities }: ActivityTimelineProps) {
                   <span className={cn(
                     "inline-flex items-center px-2 py-0.5 rounded-full font-semibold border",
                     act.isCompleted
-                      ? "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/20 dark:text-emerald-400 dark:border-emerald-900/50"
-                      : "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/20 dark:text-amber-400 dark:border-amber-900/50"
+                      ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+                      : "bg-amber-50 text-amber-700 border-amber-200"
                   )}>
                     {act.isCompleted ? "Completed" : "Pending"}
                   </span>

@@ -75,7 +75,7 @@ export function SearchResults({
                   onClick={onResultClick}
                   className="flex items-center gap-3 px-2 py-1.5 rounded-md hover:bg-muted/50 text-foreground transition-colors"
                 >
-                  <span className="p-1.5 rounded-full bg-orange-100 text-orange-600 dark:bg-orange-950/40 dark:text-orange-400">
+                  <span className="p-1.5 rounded-full bg-orange-100 text-orange-600">
                     <User className="h-4 w-4" />
                   </span>
                   <div className="flex-1 min-w-0">
@@ -104,7 +104,7 @@ export function SearchResults({
                   onClick={onResultClick}
                   className="flex items-center gap-3 px-2 py-1.5 rounded-md hover:bg-muted/50 text-foreground transition-colors"
                 >
-                  <span className="p-1.5 rounded-full bg-blue-100 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+                  <span className="p-1.5 rounded-full bg-blue-100 text-blue-600">
                     <Building2 className="h-4 w-4" />
                   </span>
                   <div className="flex-1 min-w-0">
@@ -133,7 +133,7 @@ export function SearchResults({
                   onClick={onResultClick}
                   className="flex items-center gap-3 px-2 py-1.5 rounded-md hover:bg-muted/50 text-foreground transition-colors"
                 >
-                  <span className="p-1.5 rounded-full bg-purple-100 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400">
+                  <span className="p-1.5 rounded-full bg-purple-100 text-purple-600">
                     <Briefcase className="h-4 w-4" />
                   </span>
                   <div className="flex-1 min-w-0">

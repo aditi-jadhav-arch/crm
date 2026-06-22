@@ -34,12 +34,12 @@ import { Timestamp } from "firebase/firestore";
 type DealStage = "lead" | "qualified" | "proposal" | "negotiation" | "closed_won" | "closed_lost";
 
 const STAGES: { id: DealStage; label: string; color: string }[] = [
-  { id: "lead", label: "Lead", color: "border-slate-200 dark:border-slate-800 bg-slate-50/20" },
-  { id: "qualified", label: "Qualified", color: "border-purple-200 dark:border-purple-900/40 bg-purple-50/10" },
-  { id: "proposal", label: "Proposal", color: "border-blue-200 dark:border-blue-900/40 bg-blue-50/10" },
-  { id: "negotiation", label: "Negotiation", color: "border-orange-200 dark:border-orange-900/40 bg-orange-50/10" },
-  { id: "closed_won", label: "Closed Won", color: "border-emerald-200 dark:border-emerald-900/40 bg-emerald-50/15" },
-  { id: "closed_lost", label: "Closed Lost", color: "border-rose-200 dark:border-rose-900/40 bg-rose-50/15" },
+  { id: "lead", label: "Lead", color: "border-slate-200 bg-slate-50/20" },
+  { id: "qualified", label: "Qualified", color: "border-purple-200 bg-purple-50/10" },
+  { id: "proposal", label: "Proposal", color: "border-blue-200 bg-blue-50/10" },
+  { id: "negotiation", label: "Negotiation", color: "border-orange-200 bg-orange-50/10" },
+  { id: "closed_won", label: "Closed Won", color: "border-emerald-200 bg-emerald-50/15" },
+  { id: "closed_lost", label: "Closed Lost", color: "border-rose-200 bg-rose-50/15" },
 ];
 
 export default function DealsPage() {
@@ -347,7 +347,7 @@ export default function DealsPage() {
           </button>
           <button
             onClick={(e) => handleDeleteClick(item, e)}
-            className="p-1 rounded hover:bg-red-50 dark:hover:bg-red-950/20 text-muted-foreground hover:text-red-600 cursor-pointer"
+            className="p-1 rounded hover:bg-red-50 text-muted-foreground hover:text-red-600 cursor-pointer"
             title="Delete deal"
           >
             <Trash2 className="h-4 w-4" />
@@ -468,7 +468,7 @@ export default function DealsPage() {
               label: "Bulk Delete",
               onClick: (items) => setBulkDeleteItems(items),
               icon: <Trash2 className="h-3.5 w-3.5" />,
-              className: "bg-red-50 text-red-600 hover:bg-red-100 dark:bg-red-950/20 dark:text-red-400 border border-red-200 dark:border-red-900/50",
+              className: "bg-red-50 text-red-600 hover:bg-red-100 border border-red-200",
             },
           ]}
         />
@@ -486,9 +486,9 @@ export default function DealsPage() {
                   className={cn(
                     "flex flex-col w-72 border rounded-lg shrink-0 max-h-[80vh]",
                     stage.id === "closed_won"
-                      ? "bg-emerald-50/15 dark:bg-emerald-950/10 border-emerald-200 dark:border-emerald-900/40"
+                      ? "bg-emerald-50/15 border-emerald-200"
                       : stage.id === "closed_lost"
-                      ? "bg-rose-50/15 dark:bg-rose-950/10 border-rose-200 dark:border-rose-900/40"
+                      ? "bg-rose-50/15 border-rose-200"
                       : "bg-sidebar border-sidebar-border"
                   )}
                 >

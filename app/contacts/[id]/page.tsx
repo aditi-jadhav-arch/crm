@@ -181,7 +181,7 @@ export default function ContactDetailPage() {
           
           <button
             onClick={() => setIsDeleteOpen(true)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md text-xs font-bold bg-red-50 text-red-600 hover:bg-red-100 dark:bg-red-950/20 dark:text-red-400 border border-red-200 dark:border-red-900/50 shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md text-xs font-bold bg-red-50 text-red-600 hover:bg-red-100 border border-red-200 shadow-xs transition-colors cursor-pointer"
           >
             <Trash2 className="h-3.5 w-3.5" />
             <span>Delete</span>

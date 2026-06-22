@@ -35,7 +35,7 @@ export function QuickAddMenu() {
             className="flex items-center gap-2 px-3 py-2 bg-card border border-border text-foreground hover:bg-muted text-sm font-semibold rounded-md shadow-md cursor-pointer transition-colors"
           >
             <span>Add Contact</span>
-            <span className="p-1 rounded-full bg-orange-100 text-orange-600 dark:bg-orange-950/40 dark:text-orange-400">
+            <span className="p-1 rounded-full bg-orange-100 text-orange-600">
               <UserPlus className="h-4 w-4" />
             </span>
           </button>
@@ -46,7 +46,7 @@ export function QuickAddMenu() {
             className="flex items-center gap-2 px-3 py-2 bg-card border border-border text-foreground hover:bg-muted text-sm font-semibold rounded-md shadow-md cursor-pointer transition-colors"
           >
             <span>Add Deal</span>
-            <span className="p-1 rounded-full bg-purple-100 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400">
+            <span className="p-1 rounded-full bg-purple-100 text-purple-600">
               <Briefcase className="h-4 w-4" />
             </span>
           </button>
@@ -57,7 +57,7 @@ export function QuickAddMenu() {
             className="flex items-center gap-2 px-3 py-2 bg-card border border-border text-foreground hover:bg-muted text-sm font-semibold rounded-md shadow-md cursor-pointer transition-colors"
           >
             <span>Log Activity / Task</span>
-            <span className="p-1 rounded-full bg-blue-100 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400">
+            <span className="p-1 rounded-full bg-blue-100 text-blue-600">
               <CalendarPlus className="h-4 w-4" />
             </span>
           </button>

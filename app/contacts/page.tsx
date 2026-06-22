@@ -247,7 +247,7 @@ export default function ContactsPage() {
           </button>
           <button
             onClick={(e) => handleDeleteClick(item, e)}
-            className="p-1 rounded hover:bg-red-50 dark:hover:bg-red-950/20 text-muted-foreground hover:text-red-600 cursor-pointer"
+            className="p-1 rounded hover:bg-red-50 text-muted-foreground hover:text-red-600 cursor-pointer"
             title="Delete contact"
           >
             <Trash2 className="h-4 w-4" />
@@ -404,7 +404,7 @@ export default function ContactsPage() {
             label: "Bulk Delete",
             onClick: (items) => setBulkDeleteItems(items),
             icon: <Trash2 className="h-3.5 w-3.5" />,
-            className: "bg-red-50 text-red-600 hover:bg-red-100 dark:bg-red-950/20 dark:text-red-400 border border-red-200 dark:border-red-900/50",
+            className: "bg-red-50 text-red-600 hover:bg-red-100 border border-red-200",
           },
         ]}
       />

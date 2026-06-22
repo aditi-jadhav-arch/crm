@@ -457,13 +457,13 @@ export default function SettingsPage() {
         {activeTab === "danger" && (
           <div className="space-y-6">
             <div>
-              <h3 className="text-md font-bold text-red-600 dark:text-red-400">Danger Zone</h3>
+              <h3 className="text-md font-bold text-red-600">Danger Zone</h3>
               <p className="text-xs text-muted-foreground mt-0.5">
                 Destructive account management options.
               </p>
             </div>
 
-            <div className="border border-red-200 dark:border-red-900/50 rounded-lg p-5 bg-red-50/10 max-w-md space-y-4">
+            <div className="border border-red-200 rounded-lg p-5 bg-red-50/10 max-w-md space-y-4">
               <div>
                 <span className="text-sm font-bold text-foreground block">Delete Elara Workspace</span>
                 <span className="text-xs text-muted-foreground block mt-1">

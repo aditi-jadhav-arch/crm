@@ -31,12 +31,12 @@ export function Avatar({ name, avatarUrl, size = "md", className }: AvatarProps)
       hash = name.charCodeAt(i) + ((hash << 5) - hash);
     }
     const colors = [
-      "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border-orange-200 dark:border-orange-900/50",
-      "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-900/50",
-      "bg-blue-100 text-blue-800 dark:bg-blue-950/30 dark:text-blue-300 border-blue-200 dark:border-blue-900/50",
-      "bg-purple-100 text-purple-800 dark:bg-purple-950/30 dark:text-purple-300 border-purple-200 dark:border-purple-900/50",
-      "bg-pink-100 text-pink-800 dark:bg-pink-950/30 dark:text-pink-300 border-pink-200 dark:border-pink-900/50",
-      "bg-teal-100 text-teal-800 dark:bg-teal-950/30 dark:text-teal-300 border-teal-200 dark:border-teal-900/50",
+      "bg-orange-100 text-orange-800 border-orange-200",
+      "bg-emerald-100 text-emerald-800 border-emerald-200",
+      "bg-blue-100 text-blue-800 border-blue-200",
+      "bg-purple-100 text-purple-800 border-purple-200",
+      "bg-pink-100 text-pink-800 border-pink-200",
+      "bg-teal-100 text-teal-800 border-teal-200",
     ];
     const index = Math.abs(hash) % colors.length;
     return colors[index];

@@ -272,7 +272,7 @@ export default function ActivitiesPage() {
                       title={task.isCompleted ? "Mark pending" : "Mark completed"}
                     >
                       {task.isCompleted ? (
-                        <CheckCircle2 className="h-5 w-5 text-emerald-500 fill-emerald-100 dark:fill-emerald-950/20" />
+                        <CheckCircle2 className="h-5 w-5 text-emerald-500 fill-emerald-100" />
                       ) : (
                         <Circle className="h-5 w-5 hover:scale-105 transition-transform" />
                       )}
@@ -300,7 +300,7 @@ export default function ActivitiesPage() {
                           <span className={cn(
                             "inline-flex items-center gap-1 px-1.5 py-0.5 rounded border shrink-0",
                             isOverdue 
-                              ? "bg-red-50 text-red-600 border-red-200 dark:bg-red-950/20 dark:text-red-400 dark:border-red-900/50" 
+                              ? "bg-red-50 text-red-600 border-red-200" 
                               : "bg-muted border-border"
                           )}>
                             {isOverdue && <AlertCircle className="h-3 w-3 animate-pulse" />}
@@ -332,7 +332,7 @@ export default function ActivitiesPage() {
                     {/* Row Delete Button */}
                     <button
                       onClick={() => setDeleteActivity(task)}
-                      className="p-1 rounded text-muted-foreground hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/20 self-start shrink-0 cursor-pointer"
+                      className="p-1 rounded text-muted-foreground hover:text-red-600 hover:bg-red-50 self-start shrink-0 cursor-pointer"
                       title="Delete Task"
                     >
                       <Trash2 className="h-4 w-4" />
@@ -369,11 +369,11 @@ export default function ActivitiesPage() {
                   <div className="border-l border-border pl-4 space-y-4 ml-2">
                     {groupedFeed[dateKey].map((act) => {
                       const typeColors = {
-                        call: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800/50",
-                        email: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800/50",
-                        meeting: "bg-purple-50 text-purple-600 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800/50",
-                        note: "bg-sky-50 text-sky-600 dark:bg-sky-950/20 border-sky-200 dark:border-sky-900/50",
-                        task: "bg-emerald-50 text-emerald-600 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900/50",
+                        call: "bg-blue-50 text-blue-600 border-blue-200",
+                        email: "bg-amber-50 text-amber-600 border-amber-200",
+                        meeting: "bg-purple-50 text-purple-600 border-purple-200",
+                        note: "bg-sky-50 text-sky-600 border-sky-200",
+                        task: "bg-emerald-50 text-emerald-600 border-emerald-200",
                       };
                       const tagClass = typeColors[act.type] || typeColors.note;
 

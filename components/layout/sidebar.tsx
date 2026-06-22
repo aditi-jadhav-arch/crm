@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
 import { 
   LayoutDashboard, 
   User, 
@@ -12,10 +11,7 @@ import {
   CalendarCheck, 
   BarChart3, 
   Settings, 
-  LogOut, 
-  Sun, 
-  Moon, 
-  ShieldAlert 
+  LogOut
 } from "lucide-react";
 import { useAuth } from "../../lib/hooks/useAuth";
 import { cn } from "../../lib/utils";
@@ -28,7 +24,6 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
   const { userProfile, logout } = useAuth();
 
   const navLinks = [
@@ -119,27 +114,13 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             </div>
           )}
 
-          {/* Action Row: Theme toggle & Logout */}
+          {/* Action Row: Logout */}
           <div className="flex items-center justify-between gap-2 border-t border-sidebar-border/50 pt-3">
-            {/* Theme Toggle Button */}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              type="button"
-              className="p-2 rounded-md hover:bg-sidebar-accent text-sidebar-foreground hover:text-sidebar-accent-foreground transition-colors cursor-pointer"
-              title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
-            >
-              {theme === "dark" ? (
-                <Sun className="h-4 w-4 text-amber-500" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
-            </button>
-
             {/* Logout Button */}
             <button
               onClick={() => logout()}
               type="button"
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-md text-xs font-bold hover:bg-red-50 dark:hover:bg-red-950/20 text-red-600 dark:text-red-400 transition-colors cursor-pointer ml-auto"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-md text-xs font-bold hover:bg-red-50 text-red-600 transition-colors cursor-pointer ml-auto"
             >
               <LogOut className="h-3.5 w-3.5" />
               <span>Log out</span>

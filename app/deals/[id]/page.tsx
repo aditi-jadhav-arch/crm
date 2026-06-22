@@ -121,7 +121,7 @@ export default function DealDetailPage() {
       {/* 4. Deal Header Panel */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 border border-border bg-card rounded-lg shadow-sm">
         <div className="flex items-center gap-4">
-          <div className="p-3 bg-purple-50 text-purple-600 dark:bg-purple-950/20 dark:text-purple-400 border border-purple-200 dark:border-purple-800/40 rounded-lg shadow-sm shrink-0">
+          <div className="p-3 bg-purple-50 text-purple-600 border border-purple-200 rounded-lg shadow-sm shrink-0">
             <DollarSign className="h-6 w-6" />
           </div>
           <div>
@@ -158,7 +158,7 @@ export default function DealDetailPage() {
           
           <button
             onClick={() => setIsDeleteOpen(true)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md text-xs font-bold bg-red-50 text-red-600 hover:bg-red-100 dark:bg-red-950/20 dark:text-red-400 border border-red-200 dark:border-red-900/50 shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md text-xs font-bold bg-red-50 text-red-600 hover:bg-red-100 border border-red-200 shadow-xs transition-colors cursor-pointer"
           >
             <Trash2 className="h-3.5 w-3.5" />
             <span>Delete</span>
@@ -371,7 +371,7 @@ export default function DealDetailPage() {
                   <span className="block text-xs text-muted-foreground">
                     Actual Close Date
                   </span>
-                  <span className="font-bold text-emerald-600 dark:text-emerald-400 mt-0.5 block">
+                  <span className="font-bold text-emerald-600 mt-0.5 block">
                     {formatDate(deal.actualCloseDate)}
                   </span>
                 </div>

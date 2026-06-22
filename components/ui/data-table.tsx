@@ -253,7 +253,7 @@ export function DataTable<T extends { id: string }>({
                   className={cn(
                     "hover:bg-muted/30 transition-colors",
                     onRowClick ? "cursor-pointer" : "",
-                    selectedIds.has(item.id) ? "bg-accent/40 dark:bg-accent/10" : ""
+                    selectedIds.has(item.id) ? "bg-accent/40" : ""
                   )}
                 >
                   {/* Row Checkbox */}

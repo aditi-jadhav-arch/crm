@@ -169,28 +169,28 @@ export default function DashboardPage() {
       value: stats.totalContacts,
       trend: stats.totalContactsTrend,
       icon: Users,
-      color: "text-orange-600 bg-orange-50 dark:bg-orange-950/20 dark:text-orange-400",
+      color: "text-orange-600 bg-orange-50",
     },
     {
       title: "Open Deals",
       value: stats.openDeals,
       trend: stats.openDealsTrend,
       icon: Briefcase,
-      color: "text-purple-600 bg-purple-50 dark:bg-purple-950/20 dark:text-purple-400",
+      color: "text-purple-600 bg-purple-50",
     },
     {
       title: "Total Revenue",
       value: formatCurrency(stats.totalRevenue),
       trend: stats.totalRevenueTrend,
       icon: DollarSign,
-      color: "text-emerald-600 bg-emerald-50 dark:bg-emerald-950/20 dark:text-emerald-400",
+      color: "text-emerald-600 bg-emerald-50",
     },
     {
       title: "Tasks Due Today",
       value: stats.tasksDueToday,
       trend: stats.tasksDueTodayTrend,
       icon: CheckSquare,
-      color: "text-blue-600 bg-blue-50 dark:bg-blue-950/20 dark:text-blue-400",
+      color: "text-blue-600 bg-blue-50",
     },
   ];
 
@@ -264,8 +264,8 @@ export default function DashboardPage() {
                   className={cn(
                     "flex items-center gap-0.5 text-xs font-bold px-2 py-0.5 rounded-full border shrink-0",
                     isPositive
-                      ? "bg-emerald-50 border-emerald-200 text-emerald-700 dark:bg-emerald-950/20 dark:border-emerald-900/50 dark:text-emerald-400"
-                      : "bg-red-50 border-red-200 text-red-700 dark:bg-red-950/20 dark:border-red-900/50 dark:text-red-400"
+                      ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+                      : "bg-red-50 border-red-200 text-red-700"
                   )}
                 >
                   {isPositive ? (
