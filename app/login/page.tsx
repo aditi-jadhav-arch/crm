@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -10,10 +11,30 @@ import { loginSchema } from "../../lib/validations";
 import { Lock, Mail } from "lucide-react";
 import { z } from "zod";
 
+/** Map Firebase auth error codes to human-readable messages. */
+function getAuthErrorMessage(err: any): string {
+  const code: string = err?.code ?? "";
+  switch (code) {
+    case "auth/user-not-found":
+    case "auth/invalid-credential":
+    case "auth/wrong-password":
+      return "Invalid email or password. Please try again.";
+    case "auth/too-many-requests":
+      return "Too many failed attempts. Please wait a moment and try again.";
+    case "auth/user-disabled":
+      return "This account has been disabled. Please contact support.";
+    case "auth/network-request-failed":
+      return "Network error. Please check your connection and try again.";
+    default:
+      return err?.message || "Failed to log in. Please check your credentials.";
+  }
+}
+
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
   const { signInWithEmail, signInWithGoogle } = useAuth();
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isGoogleSubmitting, setIsGoogleSubmitting] = useState(false);
 
@@ -34,9 +55,10 @@ export default function LoginPage() {
     try {
       await signInWithEmail(data.email, data.password);
       toast.success("Successfully logged in!");
+      router.replace("/dashboard");
     } catch (err: any) {
       console.error(err);
-      toast.error(err.message || "Failed to log in. Please check your credentials.");
+      toast.error(getAuthErrorMessage(err));
     } finally {
       setIsSubmitting(false);
     }
@@ -47,9 +69,10 @@ export default function LoginPage() {
     try {
       await signInWithGoogle();
       toast.success("Successfully logged in with Google!");
+      router.replace("/dashboard");
     } catch (err: any) {
       console.error(err);
-      toast.error(err.message || "Google authentication failed.");
+      toast.error(getAuthErrorMessage(err));
     } finally {
       setIsGoogleSubmitting(false);
     }
